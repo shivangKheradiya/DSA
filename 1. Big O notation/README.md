@@ -18,6 +18,14 @@ Memoery Location = FixedLocation + 4Byte (N)
 
 Where, N is index of the sample stored in array.
 
+Operations and their time complexity in arrays,
+  
+  1. Find element on any index. : Complexity O(1)
+  2. Find first element having specific value. : Compelxity O(N)
+  3. Add/ Remove element on any index. : Compelxity O(N)
+  4. Update element on any index. : Compelxity O(1)
+  5. Printing All values in array. : Compelxity O(N)
+
 ## 1.3 O(N<sup>2</sup>) : Time = A n<sup>2</sup> + B
 Where, n = Number of samples
 
