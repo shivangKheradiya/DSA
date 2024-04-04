@@ -6,7 +6,23 @@ E.g. Looping in for loop and calculate something for each index
 
 ## 1.2 O(1) : Time = A n<sup>0</sup> + B
 E.g. Summation function
-### 1.2.1 Example 1 : Arrays 
+
+## 1.3 O(N<sup>2</sup>) : Time = A n<sup>2</sup> + B
+Where, n = Number of samples
+
+Rules for finding the Order:
+  1. Keep fastest growing term
+  2. Drop Constants
+
+## 1.3 Complexities
+### 1.3.1 Time Complexity : Measures running time growth
+E.g. Binary Search Tree.. 1) Divide array in 2 parts, 2)discard one portion
+Basically, BTree has time complexity O(N / 2<sup>k</sup>) but if we apply log <sub>2</sub> complexity can be described as O(log N)
+
+### 1.3.2 Space Complexity : Measures space growth
+
+## 1.4 Example
+### 1.4.1 Example 1 : Arrays 
 Arrays are example for the constant time retrival of data. 
 
 Nomrally, Int uses 4 bytes = 8bit X 4 = 1 Binary X 8 X 4 memory location. 
@@ -25,17 +41,3 @@ Operations and their time complexity in arrays,
   3. Add/ Remove element on any index. : Compelxity O(N)
   4. Update element on any index. : Compelxity O(1)
   5. Printing All values in array. : Compelxity O(N)
-
-## 1.3 O(N<sup>2</sup>) : Time = A n<sup>2</sup> + B
-Where, n = Number of samples
-
-Rules for finding the Order:
-  1. Keep fastest growing term
-  2. Drop Constants
-
-## 1.3 Complexities
-### 1.3.1 Time Complexity : Measures running time growth
-E.g. Binary Search Tree.. 1) Divide array in 2 parts, 2)discard one portion
-Basically, BTree has time complexity O(N / 2<sup>k</sup>) but if we apply log <sub>2</sub> complexity can be described as O(log N)
-
-### 1.3.2 Space Complexity : Measures space growth
