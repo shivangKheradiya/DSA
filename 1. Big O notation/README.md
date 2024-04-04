@@ -22,6 +22,7 @@ Basically, BTree has time complexity O(N / 2<sup>k</sup>) but if we apply log <s
 ### 1.3.2 Space Complexity : Measures space growth
 
 ## 1.4 Example
+
 ### 1.4.1 Example 1 : Arrays 
 Arrays are example for the constant time retrival of data. 
 
@@ -41,3 +42,17 @@ Operations and their time complexity in arrays,
   3. Add/ Remove element on any index. : Compelxity O(N)
   4. Update element on any index. : Compelxity O(1)
   5. Printing All values in array. : Compelxity O(N)
+
+### 1.4.2 Example 2 : 
+
+Single Linked List:
+
+Single link list can be visualise based below mentioned image.
+
+![Single Link List](img/SingleLinkList.png)
+
+Double Linked List:
+
+Double link list can be visualise based below mentioned image.
+
+![Double Link List](img/DoubleLinkList.png)
