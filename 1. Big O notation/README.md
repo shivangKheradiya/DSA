@@ -6,6 +6,9 @@ E.g. Looping in for loop and calculate something for each index
 
 ## 1.2 O(1) : Time = A n<sup>0</sup> + B
 E.g. Summation function
+### 1.2.1 Arrays
+Arrays are example for the constant time retrival of data.
+![Int Array Storage Example] (img/Int4Byte.png "Integer Storage in memory")
 
 ## 1.3 O(N<sup>2</sup>) : Time = A n<sup>2</sup> + B
 Where, n = Number of samples
