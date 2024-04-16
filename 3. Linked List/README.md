@@ -1,11 +1,11 @@
-
-Single Linked List:
+# 3. Linked List
+## 3.1 Single Linked List:
 
 Single link list can be visualise based below mentioned image.
 
 ![Single Link List](img/SingleLinkList.png)
 
-Double Linked List:
+## 3.2 Double Linked List:
 
 Double link list can be visualise based below mentioned image.
 
