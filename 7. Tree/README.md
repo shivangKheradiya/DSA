@@ -16,14 +16,14 @@ Basic Terminology can be understand using below image,
 - Level of a node
 - Internal node (Atleast one child)
 - Neighbour of a Node
-- Subtree
+- Subtree (E.g. Left SubTree, Right SubTree )
 - Height of Tree
 
 ## 7.2 B-Tree or Binary Tree [ O(Log N) ]
 
 Condition for B-Tree:
-- Everynode has at most 2 child nodes
-- Binary Search Tree or BST
+- Everynode has at most 2 child nodes (Left Child < Right Child)
+- All the element must be unique
 
 ![BTree](img/BTree.png)
 
@@ -37,6 +37,8 @@ Log <sub>Sample_Reduction_Rate_Per_Ittration</sub> SampleCount = Ittration
 ## 7.2.1.2 Depth First Seach
 
 - In order Traversal : Print second(Binary) Visit 
+
+  Extensively used to short the data and remove the duplicated entity. 
 
 - Pre order Traversal : Print First Visit
 
