@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpBasics_T034
 {
@@ -10,6 +6,36 @@ namespace CSharpBasics_T034
     {
         static void Main(string[] args)
         {
+            // D d = new D();
         }
     }
+
+    class A 
+    {
+        public virtual void Print()
+        {
+            Console.WriteLine("Class A");
+        }
+    }
+
+    class B:A
+    {
+        public override void Print()
+        {
+            Console.WriteLine("Class B");
+        }
+    }
+
+    class C : A
+    {
+        public override void Print()
+        {
+            Console.WriteLine("Class C");
+        }
+    }
+
+    // This is not possible because of diamond problem
+    // class D : B , C
+    // {
+    // }
 }

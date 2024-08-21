@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpBasics_T036
 {
@@ -10,6 +6,17 @@ namespace CSharpBasics_T036
     {
         static void Main(string[] args)
         {
+            MyFnc HelloWorld = new MyFnc(Program.Print);
+
+            HelloWorld("Hello World");
+        }
+
+        // Type Safe Function pointer. E.g. It's always check signature/ type of function
+        public delegate void MyFnc(string str);
+
+        public static void Print(string msg)
+        {
+            Console.WriteLine(msg);
         }
     }
 }
