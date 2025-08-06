@@ -1,5 +1,5 @@
-set(HelloWorld_SOURCES
-    HelloWorld.c
+set(1_HelloWorld_SOURCES
+    1.HelloWorld.c
 )
 
-add_executable(HelloWorld ${HelloWorld_SOURCES})
+add_executable(1_HelloWorld ${1_HelloWorld_SOURCES})
