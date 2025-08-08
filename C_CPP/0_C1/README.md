@@ -1,3 +1,5 @@
+# Quick Recap C1
+
 ## Hello World
 
 [1.HelloWorld.c](./1.HelloWorld.c)
@@ -87,7 +89,111 @@ Literals Refer to fixed values of a built in-type.
 
 Literals can be of any of the basic data types
 ```C
-
+212             // (int) Decimal literal
+0173            // (int) Octal literal
+0b1010          // (int) Binary literal
+0xF2            // (int) Hexadecimal literal
+3.14            // (double) Floating-Point literal
+'x'             // (char) Character literal
+"Hello"         // (char *) String literal
 ```
 
 In C*9 literals are constant values having const types as;
+```C
+212             // (const int) Decimal literal
+0173            // (const int) Octal literal
+0b1010          // (const int) Binary literal
+0xF2            // (const int) Hexadecimal literal
+3.14            // (const double) Floating-Point literal
+'x'             // (const char) Character literal
+"Hello"         // (const char *) String literal
+```
+
+## Operator
+
+An operator denotes a specific operation. C has the following types of operators:
+
+- Arithmetic Operators: + - * / % ++ --
+- Relational Operators: == != < >  <= =>
+- Logical Operators: && || !
+- Bit-wise Operators: & | ~ << >>
+- Assignment Operators: = += -= *= /= ...
+- Miscellaneous Operators: . , sizeof & * ? :
+
+Arity of Operators: Number of operands for an operator
+
+- +, -, *, & Operators can be unary (1 operand) or binary (2 operands)
+- ==, !=, <, >, <=, =>, =, +=, -=, *=, /=, &, |, <<, >>, can work onnly as binary (2 operands) Operators
+- sizeof !, ~, ++, --, can work only as unary (1 operand) operator
+- ?: works as ternary (3 operands) Operator. the condition is the first operand and the if true logic and if false logic corrosponds to the other two operands.
+
+Operator Precedence: Determins which operator will be performed first in a chain of different operators
+- The Precedence of all operators are defined in the following order: ( left to right - Highest to lowest Precedence)
+- (). [], ++, --, +(unary), -(unary), !, ~, !, *, &, sizeof, *, /, %, +, -, <<, >>, ==, !=, *=, /=, =, &, |, &&, ||, ?:, =, +=, -=, <<=, >>=
+
+Oerator Associativity indicates in what order operators of equal precedence in an expression are applied.
+
+Consider the expression a @ b @ c. if the operator @ has left associativity, this expression would be interpreted as a @ ( b @ c).
+- Right to Left: ?:, =, +=, -=, *=, /=, <<=, >>=, -, +, +-, !, ~, *, &, sizeof
+- Left to Right: *, /, %, +, -, <<, >>, ==, !=, *=, =, /=, &, |, &&, ||
+
+## Expressions
+
+- A literal is an expression
+- a variable is an expression
+- 1, 2 or 3, expressions connected by an operator (of approriate arity) is an expression a function call is an expression.
+
+Examples:
+- for
+```C
+int i = 10, j = 20, k;
+int f(int x , int y){return x + y;}
+```
+- Expression are:
+```C
+10                  // Value 10
+i                   // Value 10
+-i                  // Value -10
+i - j               // Value -10
+k = 5               // Value 5
+f(i, j)             // Value 30
+i + j == i * 3      // Value true
+( i == j) ? 1 : 2   // Value 2
+```
+
+## Statement
+
+A statement is a command for a specific action. It has no value
+
+- A :(semicolon) is a (null) statement
+- An expression terminated by a :(semicolon) is a statement
+- alist of one or more statements enclosed within a pair of curly braces { and } or block is a compound statement.
+- Control constructs like if, ifelse, switch, for, which, do-while, goto, continoue, break, return are statements
+
+Examples: Expression Statement
+```C
+//Expression              //Statement
+i + j                     i + j;
+k = i + j                 k = i + j;
+funct(i,j)                funct(i,j);
+k = funct(i,j)            k = funct(i,j);
+
+```
+
+Examples: Compund Statement
+```C
+{
+  int i = 2, j = 3, t;
+  t = i;
+  i = j;
+  j = t;
+}
+```
+
+## Control constructs
+
+These statements control the flow based on conditions;
+- Selection-Statement: if, if-else, switch
+- Labeled-Statement: Statement labeled with identifier, case, or default
+- Iteration-Statement:for, which, do-while
+- Jump-Statement: goto, continoue, break, return
