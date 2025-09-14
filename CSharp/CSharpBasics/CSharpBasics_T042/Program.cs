@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpBasics_T042
 {
@@ -10,6 +7,28 @@ namespace CSharpBasics_T042
     {
         static void Main(string[] args)
         {
+            string[] users = { "abc", "def" };
+            try
+            {
+                if (users.Contains("abc"))
+                {
+                    throw new UserAlreadyLogIn("People is loged In");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetType().Name);
+            }
         }
+    }
+
+    public class UserAlreadyLogIn : Exception
+    {
+        public UserAlreadyLogIn() { }
+        public UserAlreadyLogIn(string message) : base(message) { }
+        public UserAlreadyLogIn(string message, Exception inner) : base(message, inner) { }
+        protected UserAlreadyLogIn(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }

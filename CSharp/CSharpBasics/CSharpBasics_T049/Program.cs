@@ -12,4 +12,24 @@ namespace CSharpBasics_T049
         {
         }
     }
+
+    public class Customer
+    {
+        // Can access outside class
+        private string name;
+
+        // Can't access outside class 
+        public string Name { get; set; }
+
+        // Accessed by Derived Class
+        protected int ID;
+    }
+
+    public class MyCustomer : Customer
+    {
+        public int getID()
+        {
+            return base.ID;
+        }
+    }
 }

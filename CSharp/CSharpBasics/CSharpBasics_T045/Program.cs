@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpBasics_T045
 {
@@ -10,6 +6,25 @@ namespace CSharpBasics_T045
     {
         static void Main(string[] args)
         {
+        }
+    }
+
+    public class Customer
+    {
+        public string name { get; set; }
+        public int Gender { get; set; }
+
+        public string GetGender()
+        {
+            switch (Gender)
+            {
+                case 1:
+                    return "Male";
+                case 2:
+                    return "Female";
+                default:
+                    return "Unknown";
+            }
         }
     }
 }

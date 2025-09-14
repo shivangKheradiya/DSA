@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpBasics_T050
+namespace CSharpBasics_T050_1
 {
-    internal class Program
+    public class Customer
     {
-        static void Main(string[] args)
-        {
-        }
+        internal int IID;
+        protected internal int PID;
     }
 }
