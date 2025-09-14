@@ -105,6 +105,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBasics_T050_1", "CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBasics_T050_2", "CSharpBasics_T050_2\CSharpBasics_T050_2.csproj", "{3DC03DBD-6947-401F-BD1A-1D64A244D19F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBasics_T051_1", "CSharpBasics_T051_1\CSharpBasics_T051_1.csproj", "{2BDA99C9-D608-4A00-B221-22EC7480E09C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBasics_T051_2", "CSharpBasics_T051_2\CSharpBasics_T051_2.csproj", "{7DCEC741-67ED-432D-A795-CF74D83C713E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +319,14 @@ Global
 		{3DC03DBD-6947-401F-BD1A-1D64A244D19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC03DBD-6947-401F-BD1A-1D64A244D19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC03DBD-6947-401F-BD1A-1D64A244D19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDA99C9-D608-4A00-B221-22EC7480E09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDA99C9-D608-4A00-B221-22EC7480E09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDA99C9-D608-4A00-B221-22EC7480E09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDA99C9-D608-4A00-B221-22EC7480E09C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DCEC741-67ED-432D-A795-CF74D83C713E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DCEC741-67ED-432D-A795-CF74D83C713E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DCEC741-67ED-432D-A795-CF74D83C713E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DCEC741-67ED-432D-A795-CF74D83C713E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
