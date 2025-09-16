@@ -10,6 +10,13 @@ namespace CSharpBasics_T077
     {
         static void Main(string[] args)
         {
+            List<int> intLst = new List<int>() {5, 1, 6, 2, 10, 3};
+            intLst.Sort();
+            intLst.Reverse();
+
+            List<string> stringLst = new List<string>() {"a", "S", "B", "w", "z"};
+            stringLst.Sort();
+            stringLst.Reverse();
         }
     }
 }
