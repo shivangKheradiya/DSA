@@ -22,7 +22,7 @@ namespace CSharpBasics_T070
         // 1. Use Parameter Array
         public static int AddNumbers(int firstNum, int secondNum, params int[] restNums ){
             int result = firstNum + secondNum;
-            if (!restNums)
+            if (restNums != null)
             {
                 foreach (int item in restNums)
                 {
@@ -34,17 +34,17 @@ namespace CSharpBasics_T070
 
         // 2. Method Overloading
         public static int AddNumbers(int firstNum, int secondNum){
-            return this.AddNumbers(firstNum, secondNum, null);
+            return AddNumbers(firstNum, secondNum, null);
         }
         
         // 3. Specify parameter defaults
         public static int AddNumbers(int firstNum, int secondNum, int thirdNum = 0){
-            return this.AddNumbers(firstNum, secondNum, thirdNum);
+            return AddNumbers(firstNum, secondNum, thirdNum);
         }
 
         // 4. Use optional attribute that is present in System.Runtime.InteropServices
-        public static int AddNumbers(int firstNum, int secondNum, int thirdNum = 0, [Optional] int forthNum ){
-            return this.AddNumbers(firstNum, secondNum, thirdNum, forthNum);
+        public static int AddNumbers(int firstNum, int secondNum, int thirdNum, [Optional] int forthNum ){
+            return AddNumbers(firstNum, secondNum, thirdNum, forthNum);
         }
     }
 }

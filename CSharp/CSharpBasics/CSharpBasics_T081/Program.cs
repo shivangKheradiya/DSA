@@ -1,4 +1,8 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CSharpBasics_T081
 {
@@ -14,21 +18,21 @@ namespace CSharpBasics_T081
                 Country country3 = new Country() { Code = "USA", Name = "UNITED STATES", Capital = "Washington D.C." };
                 Country country4 = new Country() { Code = "GBR", Name = "UNITED KINGDOM", Capital = "Utah" };
                 Country country5 = new Country() { Code = "CAN", Name = "CANADA", Capital = "Ottawa" };
-    
+
                 // List<Country> listCountries = new List<Country>();
-                List<string, Country> listCountries = new List<string, Country>();
-                listCountries.Add( country1.Code , country1 );
-                listCountries.Add( country2.Code , country2 );
-                listCountries.Add( country3.Code , country3 );
-                listCountries.Add( country4.Code , country4 );
-                listCountries.Add( country5.Code , country5 );
+                Dictionary<string, Country> listCountries = new Dictionary<string, Country>();
+                listCountries.Add(country1.Code, country1);
+                listCountries.Add(country2.Code, country2);
+                listCountries.Add(country3.Code, country3);
+                listCountries.Add(country4.Code, country4);
+                listCountries.Add(country5.Code, country5);
 
                 Console.WriteLine("Please enter country code:");
                 string strCountryCode = Console.ReadLine().ToUpper();
 
                 // Looping through all elements which is not good practice. So, Use dictionary.
                 // Country selectedCountry = listCountries.Find(c => c.Code == strCountryCode);
-                Country selectedCountry =  listCountries.ContainsKey(strCountryCode) ? listCountries[strCountryCode] : null;
+                Country selectedCountry = listCountries.ContainsKey(strCountryCode) ? listCountries[strCountryCode] : null;
                 if (selectedCountry != null)
                 {
                     Console.WriteLine($"Country: {selectedCountry.Name}, Capital: {selectedCountry.Capital}");
@@ -37,13 +41,13 @@ namespace CSharpBasics_T081
                 {
                     Console.WriteLine("Country code not found.");
                 }
-                
+
                 do
                 {
                     Console.WriteLine("Do you want to continue Y-N ?");
                     strUserChoice = Console.ReadLine().ToUpper();
                 } while (strUserChoice != "N" && strUserChoice != "Y");
-            }while (strUserChoice == "Y");
+            } while (strUserChoice == "Y");
         }
     }
 

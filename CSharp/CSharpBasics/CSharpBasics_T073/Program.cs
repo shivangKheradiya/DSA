@@ -26,17 +26,17 @@ namespace CSharpBasics_T073
 
             foreach (KeyValuePair<int, Customer> item in dictCust)
             {
-                Console.WriteLine("ID : "+ item.Key + " , Name : " + item.Value.Name);               
+                Console.WriteLine("ID : "+ item.Key + " , Name : " + item.Value.Name);
             }
 
             foreach (Customer cust in dictCust.Values)
             {
-                Console.WriteLine("ID : "+ cust.ID + " , Name : " + cust.Name);               
+                Console.WriteLine("ID : "+ cust.ID + " , Name : " + cust.Name);
             }
 
             Console.WriteLine("Member with ID 1 :" + dictCust[1].Name);
-            Console.WriteLine("Member with Name B :" + dictCust.FirstOrDefault(x=>x.Name == "B")?.ID );
-            Console.WriteLine("Member with salary > 3K :" + dictCust.Count(x => x.Salary > 3000) );
+            Console.WriteLine("Member with Name B :" + dictCust.FirstOrDefault(z => z.Value.Name == "B").Value.ID) ;
+            Console.WriteLine("Member with salary > 3K :" + dictCust.Count(y => y.Value.Salary > 3000) );
             
             Customer x;
             if (dictCust.TryGetValue(3, out x ))
@@ -47,9 +47,9 @@ namespace CSharpBasics_T073
                 Console.WriteLine("No Key Member found");
             }
 
-            dictCust = CustArray.ToDictionary( c => c.ID, c=>c );
-            CustArray = dictCust.ToArray(c=>c);
-            List<Customer> lstCust = dictCust.ToList(c=>c);
+            dictCust = CustArray.ToDictionary( p => p.ID, q=>q );
+            CustArray = dictCust.Values.ToArray<Customer>();
+            List<Customer> lstCust = dictCust.Values.ToList();
             Console.WriteLine("Member with Name B :"  );
 
             dictCust.Remove(3);

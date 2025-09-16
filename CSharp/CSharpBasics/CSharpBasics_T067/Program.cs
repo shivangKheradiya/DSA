@@ -21,7 +21,7 @@ namespace CSharpBasics_T067
         // 1. Use Parameter Array
         public static int AddNumbers(int firstNum, int secondNum, params int[] restNums ){
             int result = firstNum + secondNum;
-            if (!restNums)
+            if (restNums != null)
             {
                 foreach (int item in restNums)
                 {

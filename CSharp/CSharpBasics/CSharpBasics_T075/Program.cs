@@ -30,7 +30,7 @@ namespace CSharpBasics_T075
             int idy = lstCust.FindLastIndex(x=>x.Salary == 4000);
 
             Customer[] custArray = lstCust.ToArray();
-            Dictionary<int, Customer> custArray = lstCust.ToDictionary(cst => cst.ID, cst => cst);
+            Dictionary<int, Customer> custDict = lstCust.ToDictionary(cst => cst.ID, cst => cst);
         }
 
         public class Customer

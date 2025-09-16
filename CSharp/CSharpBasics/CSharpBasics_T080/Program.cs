@@ -22,7 +22,7 @@ namespace CSharpBasics_T080
             lstCust.Add(c);
             lstCust.Add(d);
 
-            List<bool> TFAll = lstCust.TrueForAll(x=> x.Salary >= 5000);
+            bool TFAll = lstCust.TrueForAll(x=> x.Salary >= 5000);
             ReadOnlyCollection<Customer> ReadOnlyLst = lstCust.AsReadOnly();
 
             // Reallocate and copy to minimum size

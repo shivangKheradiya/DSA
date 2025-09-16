@@ -29,7 +29,7 @@ namespace CSharpBasics_T072
             }
 
             Console.WriteLine("Member with ID 1 :" + dictCust[1].Name);
-            Console.WriteLine("Member with Name B :" + dictCust.FirstOrDefault(x=>x.Name == "B")?.ID );
+            Console.WriteLine("Member with Name B :" + dictCust.FirstOrDefault(x=>x.Value.Name == "B").Value.ID );
         }
     }
 

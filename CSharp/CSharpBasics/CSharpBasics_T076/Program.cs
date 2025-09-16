@@ -28,7 +28,7 @@ namespace CSharpBasics_T076
             allCust.AddRange(lstExCust);
             
             List<Customer> rangeCust = allCust.GetRange(0,3);
-            allCust.AddRange(0,rangeCust);
+            allCust.InsertRange(0,rangeCust);
             allCust.RemoveAt(0);
             allCust.RemoveRange(0,2);
             allCust.Clear();

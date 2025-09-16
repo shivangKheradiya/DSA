@@ -34,7 +34,7 @@ namespace CSharpBasics_T079
             lstCust.Sort((x,y)=> x.ID.CompareTo(y.ID));
         }
 
-        public static int ComparisonByID<in Customer>(Customer x, Customer y){
+        public static int ComparisonByID(Customer x, Customer y){
             return x.ID.CompareTo(y.ID);
         }
     }

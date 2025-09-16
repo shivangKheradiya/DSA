@@ -35,8 +35,9 @@ namespace CSharpBasics_T078
         public string Name { get; set; }
         public int Salary { get; set; }
 
-        // Compare by Salary. It's possible to compare by name 
-        int CompareTo(Customer other){
+        // Compare by Salary. It's possible to compare by name
+        int IComparable<Customer>.CompareTo(Customer other)
+        {
             return Salary.CompareTo(other.Salary); // compare will give 3 result, -1/0/1
         }
     }
