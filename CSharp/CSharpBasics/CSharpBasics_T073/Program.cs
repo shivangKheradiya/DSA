@@ -10,10 +10,11 @@ namespace CSharpBasics_T073
     {
         static void Main(string[] args)
         {
-            Dictionary<int, Customer> dictCust = new Dictionary<int, Customer>();
             Customer a = new Customer(){ ID = 1, Name = "A", Salary = 5000 };
             Customer b = new Customer(){ ID = 2, Name = "B", Salary = 3000 };
             Customer c = new Customer(){ ID = 3, Name = "C", Salary = 4000 };
+
+            Dictionary<int, Customer> dictCust = new Dictionary<int, Customer>();
             Customer[] CustArray = new Customer[3];
             CustArray[0] = a;
             CustArray[1] = b;
