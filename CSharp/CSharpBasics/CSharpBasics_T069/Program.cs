@@ -16,6 +16,7 @@ namespace CSharpBasics_T069
             * 3. Specify parameter defaults
             * 4. Use optional attribute that is present in System.Runtime.InteropServices
             */
+            int result = AddNumbers(0,0,thirdNum:3);
         }
         
         // 1. Use Parameter Array
