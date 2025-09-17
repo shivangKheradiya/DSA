@@ -10,6 +10,9 @@ namespace CSharpBasics_T097
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("No. Of cores: " + Environment.ProcessorCount);
+
+            // Don't exceed total number of process more than these count as processor overhead will degrades performace
         }
     }
 }
