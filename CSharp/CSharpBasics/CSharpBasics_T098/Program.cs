@@ -33,7 +33,7 @@ namespace CSharpBasics_T098
             //Same things can be implimented button click event
         }
 
-        public bool FindCustomer(Customer cust){
+        public static bool FindCustomer(Customer cust){
             return cust.ID == 2;
         }
     }

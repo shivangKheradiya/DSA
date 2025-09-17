@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSharpBasics_T095
@@ -14,11 +15,11 @@ namespace CSharpBasics_T095
             Account aB = new Account(102,5000);
 
             AccountManager amA = new AccountManager(aA, aB, 1000);
-            Thread T1 = new Thread(aA.Transfer);
+            Thread T1 = new Thread(amA.Transfer);
             T1.Name = "T1";
 
             AccountManager amB = new AccountManager(aA, aB, 1000);
-            Thread T2 = new Thread(aB.Transfer);
+            Thread T2 = new Thread(amB.Transfer);
             T2.Name = "T2";
 
             T1.Start();
@@ -36,12 +37,12 @@ namespace CSharpBasics_T095
         private int _id;
         private double _balance;
 
-        public int ID
+        public Account(int id, double balance)
         {
-            get { return _id; }
-            set { _id = value; }
+            _id = id;
+            _balance = balance;
         }
-        
+
         public void Withdraw(double amount){
             _balance -= amount;
         }

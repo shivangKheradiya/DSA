@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSharpBasics_T094
 {
     internal class Program
     {
+        public static int Sum = 0;
         static void Main(string[] args)
         {
-            Thread T1 = new Thread(RunSumWithInterlock);
-            Thread T2 = new Thread(RunSumWithInterlock);
-            Thread T3 = new Thread(RunSumWithInterlock);
+            Thread T1 = new Thread(RunSumWithLock);
+            Thread T2 = new Thread(RunSumWithLock);
+            Thread T3 = new Thread(RunSumWithLock);
             
             T1.Start();
             T2.Start();

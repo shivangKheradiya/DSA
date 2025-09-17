@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSharpBasics_T102
 {
     internal class Program
     {
-        public int counts { get; set; } = 0;
+        public static int counts { get; set; } = 0;
 
         static void Main(string[] args)
         {
-            Thread T1 = new Thread( ()=> {
+            Thread T1 = new Thread(()=> {
                 counts = CountChar();
                 // Method 1
-                // Action action = () => Console.WriteLine(counts + " no of chars.");
+                //Action action = () => Console.WriteLine(counts + " no of chars.");
                 Action action = new Action(ConsoleWrite);
-                this.BeginInvoke(action);
+                action.BeginInvoke();
             });
             T1.Start();
             int chrs = counts;
@@ -26,11 +28,11 @@ namespace CSharpBasics_T102
             Thread.Sleep(10000);
         }
 
-        private void ConsoleWrite(){
+        private static void ConsoleWrite(){
             Console.WriteLine(counts + " no of chars.");
         }
 
-        public int CountChar(){
+        public static int CountChar(){
             int count = 0;
             using (StreamReader reader = new StreamReader(@"C:\db\x.txt"))
             {
