@@ -1,39 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CSharpBasics_T101
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            int chrs = CountChar();
-            Console.WriteLine("Char count :" + chrs );
-            asyncTaskRun();
-            Thread.Sleep(10000);
-        }
-
-        public static async void asyncTaskRun(){
-            Task<int> myTask = new Task<int>(CountChar);
-            myTask.Start();
-            int chrs = await myTask;
-            Console.WriteLine("Char count :" + chrs );
-        }
-
-        public static int CountChar(){
-            int count = 0;
-            using (StreamReader reader = new StreamReader(@"C:\db\x.txt"))
-            {
-                string content = reader.ReadToEnd();
-                count += content.Length;
-                Thread.Sleep(5000);
-            }
-            return count;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new CountChar());
         }
     }
 }
